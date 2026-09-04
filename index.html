@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gizlilik Politikası — Coğrafya Ustası</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { max-width: 46rem; margin: 0 auto; padding: 2rem 1.25rem 4rem;
+         font: 16px/1.65 -apple-system, "Segoe UI", Roboto, sans-serif; }
+  h1 { font-size: 1.6rem; line-height: 1.25; }
+  h2 { margin-top: 2.2rem; font-size: 1.15rem; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+  th, td { border: 1px solid #8884; padding: .45rem .6rem; text-align: left; vertical-align: top; }
+  code { background: #8881; padding: .1rem .3rem; border-radius: 4px; }
+  blockquote { border-left: 3px solid #8884; margin: 1rem 0; padding: .2rem 0 .2rem 1rem; }
+  a { color: #2E7D32; }
+  @media (prefers-color-scheme: dark) { a { color: #81C784; } }
+</style>
+</head>
+<body>
+<h1>Gizlilik Politikası — Coğrafya Ustası</h1>
+<p><strong>Son güncelleme: 2 Eylül 2026 (2. sürüm — reklam ve abonelik eklendi)</strong></p>
+<p>Bu metin, <strong>Coğrafya Ustası</strong> adlı Android uygulamasının hangi verileri
+işlediğini açıklar.</p>
+<p><strong>Sorumlu:</strong> Abdullah Karadeniz — bireysel geliştirici
+<strong>İletişim:</strong> abdullah.karadeniz112@gmail.com</p>
+<hr />
+<h2>1. Kısaca</h2>
+<p>Uygulamanın <strong>çalışması için hesap açmak gerekmez.</strong> Soru çözme, bilgi
+kartları, haritalar, deneme sınavı ve not defteri dâhil bütün özellikler
+hesapsız ve internetsiz kullanılabilir. Bu durumda uygulama <strong>hiçbir veriyi
+cihazınızın dışına göndermez.</strong></p>
+<p>Yalnızca <strong>Sıralama</strong> bölümünü kullanmak isterseniz Google hesabınızla giriş
+yaparsınız ve o zaman aşağıdaki veriler sunucuya kaydedilir.</p>
+<p>Uygulamanın ücretsiz sürümünde <strong>reklam gösterilir</strong>; bunun için reklam ağı
+(Google AdMob) cihazınızın reklam kimliğini işler. Premium aboneliğiniz varsa
+reklam gösterilmez ve reklam ağına hiçbir veri gitmez.</p>
+<hr />
+<h2>2. Cihazınızda kalan veriler</h2>
+<p>Aşağıdakiler yalnızca telefonunuzda saklanır, hiçbir sunucuya gönderilmez ve
+tarafımızdan görülemez:</p>
+<ul>
+<li>çözdüğünüz sorular, doğru/yanlış sayıları ve konu bazlı başarı oranlarınız</li>
+<li>yanlış yaptığınız soruların listesi ve tekrar planınız</li>
+<li>günlük hedefiniz, çalışma seriniz ve günlük ilerleme kayıtlarınız</li>
+<li>deneme sınavı sonuçlarınız</li>
+<li>bilgi kartı favorileriniz, kendi yazdığınız notlar ve harita çalışmalarınız</li>
+<li>görünüm (açık/koyu tema) tercihiniz</li>
+</ul>
+<p>Bu veriler Android'in uygulama deposunda tutulur. <strong>Uygulamayı silerseniz
+hepsi silinir.</strong> Yedeklenmezler; başka bir cihaza aktarılmazlar.</p>
+<hr />
+<h2>3. Sıralama kullanılırsa işlenen veriler</h2>
+<p>Sıralama, altyapı olarak Google'ın <strong>Firebase Authentication</strong> ve <strong>Cloud
+Firestore</strong> hizmetlerini kullanır.</p>
+<h3>3.1 Giriş için</h3>
+<p>Google ile giriş yaptığınızda Firebase Authentication sizin için bir hesap
+kaydı oluşturur. Bu kayıtta Google hesabınıza ait <strong>e-posta adresiniz</strong> ve
+<strong>benzersiz bir kullanıcı kimliği (uid)</strong> bulunur. Bu kaydı yalnızca sizi
+tanımak (bir sonraki açılışta aynı kişi olduğunuzu anlamak) için kullanırız.</p>
+<h3>3.2 Sıralama listesi için</h3>
+<p>Sıralamada görünmek üzere sunucuya şunlar yazılır:</p>
+<table>
+<thead>
+<tr>
+<th>Veri</th>
+<th>Açıklama</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>kullanıcı kimliği (uid)</td>
+<td>kaydınızı sizinle eşleştirmek için</td>
+</tr>
+<tr>
+<td><strong>takma adınız</strong></td>
+<td>listede görünen ad — <strong>siz yazarsınız</strong></td>
+</tr>
+<tr>
+<td>sezon puanınız</td>
+<td>çözdüğünüz soru ve doğru sayısından hesaplanır</td>
+</tr>
+<tr>
+<td>çözülen soru ve doğru sayısı</td>
+<td>sıralamada eşitlik bozmak için</td>
+</tr>
+<tr>
+<td>son güncelleme zamanı</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>🔒 <strong>Gerçek adınız ve e-posta adresiniz sıralama listesine yazılmaz.</strong>
+Listede yalnızca kendi belirlediğiniz takma ad görünür. Diğer kullanıcılar
+e-posta adresinizi göremez.</p>
+<h3>3.3 Toplanmayanlar</h3>
+<p>Uygulama şunları <strong>toplamaz:</strong> konum, rehber, fotoğraf, dosya, mikrofon,
+kamera, kişisel mesajlar. <strong>Üçüncü taraf analiz aracı kullanılmaz.</strong></p>
+<p><a id="reklamlar"></a></p>
+<h2>3b. Reklamlar (ücretsiz kullanım)</h2>
+<p>Ücretsiz kullanımda uygulama <strong>Google AdMob</strong> üzerinden geçiş reklamı gösterir.</p>
+<p><strong>Ne zaman:</strong> yalnızca bir testi, deneme sınavını ya da bulmacayı <strong>bitirip
+çıkarken</strong>. Soru çözerken, harita incelerken veya uygulamayı açarken reklam
+gösterilmez. İki reklam arasında en az 2 dakika bulunur, günde en çok 12
+reklam gösterilir ve uygulamayı yeni kurduysanız ilk 10 dakika hiç reklam
+çıkmaz.</p>
+<p><strong>Hangi veri:</strong> reklam gösterimi ve ölçümü için Google, cihazınızın <strong>reklam
+kimliğini (Advertising ID)</strong> ve reklamın gösterildiği cihaza ait teknik
+bilgileri (cihaz modeli, işletim sistemi sürümü, yaklaşık konum bilgisi
+olarak IP adresi) işler. Bu veriler bize iletilmez; Google'ın işleyicisidir.
+Google'ın reklamlarda veri kullanımı:
+<a href="https://policies.google.com/technologies/partner-sites">https://policies.google.com/technologies/partner-sites</a></p>
+<p><strong>Reklam kimliğini sıfırlamak ya da kişiselleştirmeyi kapatmak</strong> Android
+ayarlarından mümkündür: Ayarlar → Google → Reklamlar.</p>
+<p><strong>Premium abonelikte</strong> reklam gösterilmez; reklam SDK'sı hiç başlatılmaz ve
+reklam ağına hiçbir veri gönderilmez.</p>
+<p><a id="premium"></a></p>
+<h2>3c. Premium abonelik</h2>
+<p>Premium, yıllık yenilenen bir aboneliktir ve tek şey sağlar: <strong>reklamların
+kalkması.</strong> Uygulamanın içeriği ve çevrimdışı kullanımı abonelikten bağımsız
+olarak herkese açıktır.</p>
+<p>Ödeme tamamen <strong>Google Play</strong> üzerinden yapılır; kart bilgileriniz uygulamaya
+hiç ulaşmaz ve tarafımızca görülmez. Uygulama yalnızca "abonelik etkin mi"
+bilgisini ve tahminî yenilenme tarihini <strong>cihazınızda</strong> saklar. Aboneliği
+Play Store → Ödemeler ve abonelikler bölümünden istediğiniz zaman iptal
+edebilirsiniz.</p>
+<hr />
+<h2>4. Verilerin saklanması ve paylaşımı</h2>
+<p>Sıralama verileri Google Cloud altyapısında (Firebase) saklanır. Veriler
+<strong>satılmaz</strong>, pazarlama amacıyla kullanılmaz ve yasal bir zorunluluk olmadıkça
+üçüncü taraflarla paylaşılmaz. Google, bu hizmetleri sağlayan işleyici
+konumundadır; kendi gizlilik politikası
+<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a> adresindedir.</p>
+<p>Sıralama kayıtları, hesabınızı silene kadar saklanır.</p>
+<hr />
+<p><a id="hesap-silme"></a></p>
+<h2>5. Hesabınızı ve verilerinizi silme</h2>
+<p>Hesabınızı istediğiniz zaman silebilirsiniz.</p>
+<p><strong>Uygulama içinden:</strong>
+Sıralama ekranı → sağ üstteki hesap simgesi → <strong>Hesabımı sil</strong></p>
+<p>Bu işlem şunları kalıcı olarak siler:</p>
+<ul>
+<li>bütün sezonlardaki sıralama puanlarınız</li>
+<li>takma adınız</li>
+<li>giriş hesabınız (Firebase Authentication kaydı, e-posta dâhil)</li>
+</ul>
+<p>İşlem geri alınamaz. Cihazınızdaki çalışma verileriniz (2. bölüm) bu işlemden
+etkilenmez; onları silmek için uygulamayı kaldırmanız yeterlidir.</p>
+<p><strong>Uygulamaya erişemiyorsanız:</strong>
+abdullah.karadeniz112@gmail.com adresine, giriş yaptığınız Google hesabının e-posta
+adresiyle "hesap silme talebi" konulu bir ileti gönderin. Talebiniz en geç
+30 gün içinde yerine getirilir.</p>
+<hr />
+<p><a id="takma-adlar"></a></p>
+<h2>5b. Takma adlar, şikâyet ve engelleme</h2>
+<p>Sıralamadaki takma adları kullanıcılar kendileri yazar; yani herkese açık,
+kullanıcı üretimi bir içeriktir. Bu alanı şöyle yönetiyoruz:</p>
+<ul>
+<li><strong>Süzgeç:</strong> takma ad kaydedilmeden önce denetlenir. Küfür, hakaret, nefret
+  söylemi, cinsel içerik, bağlantı/reklam ve "ÖSYM", "admin" gibi sahte
+  yetkili adları reddedilir; harf yerine rakam koyma gibi atlatma yolları da
+  hesaba katılır.</li>
+<li><strong>Şikâyet:</strong> sıralamada bir satıra uzun basıp <strong>"Uygunsuz adı şikâyet et"</strong>
+  seçilebilir. Şikâyet bize ulaşır ve <strong>en geç 7 gün içinde</strong> incelenir;
+  kural ihlali doğrulanırsa takma ad kaldırılır, tekrarında hesap kapatılır.</li>
+<li><strong>Engelleme:</strong> aynı menüden <strong>"Bu kişiyi gizle"</strong> seçilirse o kullanıcı
+  sizin listenizde bir daha görünmez. Bu tercih yalnızca sizin cihazınızda
+  tutulur, karşı tarafa bildirilmez.</li>
+<li>Şikâyet kaydında şikâyet edenin ve edilenin kullanıcı kimliği, şikâyet
+  edilen takma ad ve seçilen sebep bulunur. Bu kayıtları yalnızca biz
+  görebiliriz; başka kullanıcılara açılmaz.</li>
+</ul>
+<hr />
+<h2>6. Çocukların gizliliği</h2>
+<p>Uygulama KPSS'ye hazırlanan yetişkinlere yöneliktir. 13 yaşın altındaki
+çocuklardan bilerek veri toplanmaz.</p>
+<hr />
+<h2>7. Haklarınız</h2>
+<p>Bulunduğunuz ülkenin mevzuatına göre (Türkiye'de <strong>KVKK</strong>, Avrupa Birliği'nde
+<strong>GDPR</strong>) verilerinize erişme, düzeltme, silme ve işlenmesine itiraz etme
+haklarınız vardır. Bu haklarınızı kullanmak için
+abdullah.karadeniz112@gmail.com adresinden bize ulaşabilirsiniz.</p>
+<hr />
+<h2>8. Değişiklikler</h2>
+<p>Bu politika değişirse yukarıdaki "Son güncelleme" tarihi yenilenir ve önemli
+değişiklikler uygulama içinde duyurulur.</p>
+</body>
+</html>
